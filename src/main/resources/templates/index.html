@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Ninja Gold Game</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1 class="gameTitle">Ninja Gold Game</h1>
+<p class="oro">Oro Total: <span th:text="${ninjaGold}"></span></p>
+
+<section class="actionsContainer">
+  <form action="#" method="post" th:action="@{/farm}">
+    <button class="actionBtn" type="submit">Granja</button>
+  </form>
+
+  <form  action="#" method="post" th:action="@{/cave}">
+    <button class="actionBtn" type="submit">Cueva</button>
+  </form>
+
+  <form action="#" method="post" th:action="@{/house}">
+    <button class="actionBtn" type="submit">Casa</button>
+  </form>
+
+  <form action="#" method="post" th:action="@{/casino}">
+    <button class="actionBtn" type="submit">Casino</button>
+  </form>
+  <form action="#" method="post" th:action="@{/spa}">
+    <button class="actionBtn" type="submit">Spa</button>
+  </form>
+</section>
+<form class="resetForm" action="#" method="post" th:action="@{/reset}">
+  <button class="resetBtn" type="submit">Reiniciar</button>
+</form>
+
+<section class="activitiesContainer">
+  <h2>Actividades</h2>
+  <ul>
+    <li th:each="activity : ${activities}" th:text="${activity}"></li>
+  </ul>
+</section>
+</body>
+</html>
