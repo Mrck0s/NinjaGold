@@ -16,17 +16,18 @@ body{
     background-color: rgba(0, 0, 0, 0.86);
     color: goldenrod;
 }
-.oro{
+.countersContainer{
     text-align: center;
     padding: 0.5em;
     margin: 1em;
     background-color: #000;
-    border-radius: 1em;
     font-size: 2em;
     color: goldenrod;
     border: 2px solid gold;
+    border-radius: 1em;
     box-shadow: 0 0 15px 1px #230d03;
 }
+
 .actionsContainer{
     display: flex;
     justify-content: space-between;
@@ -72,6 +73,7 @@ body{
 
 }
 .activitiesContainer h2{
+    padding-top: 0.5em;
     text-align: center;
     font-size: 2em;
     color: goldenrod;

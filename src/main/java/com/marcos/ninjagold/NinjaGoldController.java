@@ -13,6 +13,7 @@ import java.util.Random;
 @Controller
 public class NinjaGoldController {
     private int ninjaGold = 0;
+    private int countCelda = 0;
     private final int deudaMax = -100;
 
     private List<String> activities = new ArrayList<>();
@@ -21,6 +22,7 @@ public class NinjaGoldController {
     public String index(Model model) {
         model.addAttribute("ninjaGold", ninjaGold);
         model.addAttribute("activities", activities);
+        model.addAttribute("countCelda", countCelda);
         return "index";
     }
 
@@ -89,7 +91,7 @@ public class NinjaGoldController {
             ninjaGold = 0;
             activities.clear();
             activities.add("¡Has sido enviado a la cárcel por acumular demasiadas deudas! (" + LocalDateTime.now() + ")");
-
+            countCelda++;
         }
     }
 }
